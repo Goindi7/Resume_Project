@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tree & Leaf Predictor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      
+      /* Custom Animations */
+      .hover-animate {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-animate:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-green-400 via-green-200 to-green-100 text-gray-800">
+
+    <!-- Navbar -->
+    <header class="bg-green-700 text-white shadow-lg">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <h1 class="text-3xl font-bold">Tree & Leaf Predictor</h1>
+        <nav>
+          <ul class="flex space-x-4">
+            <li><a href="#" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#" class="hover:text-gray-300">About</a></li>
+            <li><a href="#" class="hover:text-gray-300">Predict</a></li>
+            <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-12 px-4">
+      <section class="text-center">
+        <h2 class="text-4xl font-bold text-green-900">Understand Nature Like Never Before</h2>
+        <p class="text-lg text-gray-700 mt-4">
+          Our advanced Tree & Leaf Prediction tool allows you to analyze and predict the health, type, and future growth of various trees and leaves. Powered by machine learning and environmental data, this tool is here to help you protect and nurture our planet.
+        </p>
+      </section>
+
+      <!-- Image Gallery -->
+      <section class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-animate">
+          <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2015/03/26/09/54/trees-690270_960_720.jpg" alt="Forest View">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Forest View</h3>
+            <p class="text-gray-600">A breathtaking view of trees in their natural habitat.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-animate">
+          <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2016/09/22/14/46/lone-tree-1682340_960_720.jpg" alt="Lone Tree in Field">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Lone Tree</h3>
+            <p class="text-gray-600">A single tree standing strong in an open field.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-animate">
+          <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2016/10/10/09/06/fall-plant-nature-1730820_960_720.jpg" alt="Autumn Leaves">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Autumn Leaves</h3>
+            <p class="text-gray-600">Colorful leaves symbolizing the beauty of fall.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-animate">
+          <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2020/04/21/10/26/green-leaf-5075000_960_720.jpg" alt="Green Leaf">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Green Leaf</h3>
+            <p class="text-gray-600">The freshness of nature captured in a single leaf.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prediction Tool -->
+      <section class="mt-16 text-center">
+        <h2 class="text-3xl font-bold text-green-900">Start Predicting Now!</h2>
+        <p class="text-lg text-gray-700 mt-2">Upload a tree or leaf image to get a prediction:</p>
+
+        <div class="mt-6">
+          <input type="file" id="fileInput" accept="image/*" class="block mx-auto bg-gray-100 p-2 border border-gray-300 rounded-lg" />
+          <button onclick="predict()" class="mt-4 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-500 transition-all duration-300">
+            Predict
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+      <p>&copy; 2024 Tree & Leaf Predictor. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function predict() {
+        const fileInput = document.getElementById('fileInput');
+        if (fileInput.files.length > 0) {
+          alert('Prediction feature coming soon!');
+        } else {
+          alert('Please upload a photo!');
+        }
+      }
+    </script>
+
+  </body>
+</html>
